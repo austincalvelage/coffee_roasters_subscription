@@ -142,7 +142,7 @@
   em,
   .italic {
     font-style: normal;
-    font-variation-settings: 'slnt' -10;
+    font-variation-settings: "slnt" -10;
   }
 }
 

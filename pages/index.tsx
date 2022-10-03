@@ -1,27 +1,28 @@
-import type { NextPage } from 'next'
-import Image from 'next/image'
-import logo from '../public/assets/logo.svg'
-import hamburgerBtn from "../public/assets/hamburger-btn.svg"
+import type { NextPage } from "next";
+import Image from "next/image";
+import logo from "../public/assets/shared/desktop/logo.svg";
+import hamburgerBtn from "../public/assets/shared/mobile/icon-hamburger.svg";
+import HeroSection from "./components/HeroSection";
 
 const Home: NextPage = () => {
   return (
-    <div className='h-screen container space-y-4 pt-4'>
-      <header className='flex justify-between'>
-        <Image src={logo} width="165" height="20" alt='logo' />
-        <Image src={hamburgerBtn} width="20" height="20" alt='logo' />
-      </header>
-      <section className=' dark flex justify-center'>
-        <div className='bg-image-hero-mb h-[500px] w-[330px] border border-black bg-cover rounded flex flex-col justify-center items-center text-center space-y-3'>
-          <h1 className='text-primary text-[40px] leading-10 font-fraunces'>Great coffee made simple.</h1>
-          <p className='font-barlow text-secondary leading-7'>
-            Start your mornings with the world’s best coffees. Try our expertly curated artisan coffees
-            from our best roasters delivered directly to your door, at your schedule.
-          </p>
-          <button className='bg-[#0E8784] text-lg font-fraunces py-2 px-4 rounded text-primary'>Create your plan</button>
+    <div className="h-screen space-y-4 px-3 pt-4 md:px-5 lg:px-10">
+      <header className="mb-5 flex justify-between md:mb-6 lg:mb-4">
+        <div className="h-full w-20 md:w-30 lg:w-25">
+          <Image src={logo} alt="logo" layout="responsive" />
         </div>
-      </section>
+        <div className="md:hidden">
+          <Image src={hamburgerBtn} width="20" height="20" alt="logo" />
+        </div>
+        <nav className="hidden gap-4 font-barlow text-xs font-bold tracking-widest text-secondary md:flex ">
+          <div>HOME</div>
+          <div>ABOUT US</div>
+          <div>CREATE YOUR PLAN</div>
+        </nav>
+      </header>
+      <HeroSection />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
