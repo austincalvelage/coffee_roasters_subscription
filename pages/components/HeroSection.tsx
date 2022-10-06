@@ -71,7 +71,7 @@ function HeroSection({ page }: Props): JSX.Element {
           <div className="font-fraunces text-[40px] leading-10 md:text-5xl lg:text-[72px]">
             {determinePrimaryText()}
           </div>
-          <p className="px-3 font-barlow leading-7">
+          <p className="px-3 font-barlow leading-7 md:px-0">
             {determineSecondaryText()}
           </p>
           {page === "home" && (
