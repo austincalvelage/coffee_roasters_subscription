@@ -1,28 +1,71 @@
 import Image from "next/image";
+import Link from "next/link";
 import logo from "../../public/assets/shared/desktop/logo.svg";
 import hamburgerBtn from "../../public/assets/shared/mobile/icon-hamburger.svg";
-import Link from "next/link";
+import closeBtn from "../../public/assets/shared/mobile/icon-close.svg";
+import { useState } from "react";
 
-function Header(): JSX.Element {
+type Props = {};
+
+function Header({}: Props): JSX.Element {
+  const [navToggle, setNavToggle] = useState(false);
+
+  function navToggleHandler() {
+    setNavToggle((prevState) => !prevState);
+  }
+
   return (
     <header className="mb-5 flex justify-between md:mb-6 lg:mb-4">
       <div className="h-full w-20 md:w-30 lg:w-25">
         <Image src={logo} alt="logo" layout="responsive" />
       </div>
-      <div className="md:hidden">
-        <Image src={hamburgerBtn} width="20" height="20" alt="logo" />
+      <div className="md:hidden" onClick={navToggleHandler}>
+        {!navToggle && (
+          <Image src={hamburgerBtn} width="20" height="20" alt="logo" />
+        )}
+        {navToggle && (
+          <Image src={closeBtn} width="20" height="20" alt="logo" />
+        )}
       </div>
       <nav className="hidden gap-4 font-barlow text-xs font-bold tracking-widest text-secondary md:flex ">
         <div>
-          <Link href="/">HOME</Link>
+          <Link href="/">
+            <a>HOME</a>
+          </Link>
         </div>
         <div>
-          <Link href="/about">ABOUT</Link>
+          <Link href="/about">
+            <a>ABOUT US</a>
+          </Link>
         </div>
         <div>
-          <Link href="/plan">PLAN</Link>
+          <Link href="/plan">
+            <a>CREATE YOUR PLAN</a>
+          </Link>
         </div>
       </nav>
+      {navToggle && (
+        <nav className="absolute left-0 top-12 z-10 h-screen w-screen">
+          <div className="space-y-4 bg-white text-center font-fraunces text-2xl text-[#333D4B] ">
+            <div>
+              <Link href="/">
+                <a>Home</a>
+              </Link>
+            </div>
+            <div>
+              <Link href="/about">
+                <a>About Us</a>
+              </Link>
+            </div>
+            <div>
+              <Link href="/plan">
+                <a>Create your Plan</a>
+              </Link>
+            </div>
+          </div>
+          <div className="h-full bg-gradient-to-b from-white to-white/50" />
+        </nav>
+      )}
     </header>
   );
 }

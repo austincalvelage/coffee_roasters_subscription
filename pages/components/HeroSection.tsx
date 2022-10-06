@@ -26,7 +26,7 @@ function HeroSection({ page }: Props): JSX.Element {
     } else if (page === "about") {
       return <h2>About Us</h2>;
     } else if (page === "plan") {
-      return <h2>Plan</h2>;
+      return <h2>Create a plan</h2>;
     }
   }
 
@@ -51,9 +51,9 @@ function HeroSection({ page }: Props): JSX.Element {
     } else if (page === "plan") {
       return (
         <>
-          Coffee the way you wanted it to be. For coffee delivered tomorrow, or
-          next week. For whatever brew method you use. For choice, for
-          convenience, for quality.
+          Build a subscription plan that best fits your needs. We offer an
+          assortment of the best artisan coffees from around the globe delivered
+          fresh to your door.
         </>
       );
     }
@@ -67,15 +67,15 @@ function HeroSection({ page }: Props): JSX.Element {
           determineBackgroundImage()
         )}
       >
-        <div className="space-y-5 text-center md:w-1/2 md:text-left lg:w-3/5 xl:w-1/2 ">
-          <div className="font-fraunces text-[40px] leading-10 text-primary md:text-5xl lg:text-[72px]">
+        <div className="space-y-3 text-center text-primary md:w-1/2 md:text-left lg:w-3/5 xl:w-1/2">
+          <div className="font-fraunces text-[40px] leading-10 md:text-5xl lg:text-[72px]">
             {determinePrimaryText()}
           </div>
-          <p className="font-barlow leading-7 text-secondary">
+          <p className="px-3 font-barlow leading-7 md:px-0">
             {determineSecondaryText()}
           </p>
           {page === "home" && (
-            <button className="rounded bg-[#0E8784] py-2 px-4 font-fraunces text-lg text-primary">
+            <button className="rounded bg-[#0E8784] py-2 px-4 font-fraunces text-lg">
               Create your plan
             </button>
           )}
