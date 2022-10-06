@@ -299,12 +299,24 @@ module.exports = {
         customize them in the base theme object above instead.
       /*/
       backgroundImage: {
-        "image-hero-mb":
+        "image-hero-home-mb":
           "url('../public/assets/home/mobile/image-hero-coffeepress.jpg')",
-        "image-hero-tb":
+        "image-hero-home-tb":
           "url('../public/assets/home/tablet/image-hero-coffeepress.jpg')",
-        "image-hero-dk":
+        "image-hero-home-dk":
           "url('../public/assets/home/desktop/image-hero-coffeepress.jpg')",
+        "image-hero-about-mb":
+          "url('../public/assets/about/mobile/image-hero-whitecup.jpg')",
+        "image-hero-about-tb":
+          "url('../public/assets/about/tablet/image-hero-whitecup.jpg')",
+        "image-hero-about-dk":
+          "url('../public/assets/about/desktop/image-hero-whitecup.jpg')",
+        "image-hero-plan-mb":
+          "url('../public/assets/plan/mobile/image-hero-blackcup.jpg')",
+        "image-hero-plan-tb":
+          "url('../public/assets/plan/tablet/image-hero-blackcup.jpg')",
+        "image-hero-plan-dk":
+          "url('../public/assets/plan/desktop/image-hero-blackcup.jpg')",
       },
       backgroundColor: {
         primary: "var(--bg-primary)",
