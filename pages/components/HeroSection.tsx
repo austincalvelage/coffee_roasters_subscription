@@ -1,4 +1,4 @@
-import cn from 'classNames';
+import cn from "classnames";
 
 type Props = {
   page: string;
