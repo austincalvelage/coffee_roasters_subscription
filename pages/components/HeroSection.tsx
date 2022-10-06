@@ -26,7 +26,7 @@ function HeroSection({ page }: Props): JSX.Element {
     } else if (page === "about") {
       return <h2>About Us</h2>;
     } else if (page === "plan") {
-      return <h2>Plan</h2>;
+      return <h2>Create a plan</h2>;
     }
   }
 
@@ -67,7 +67,7 @@ function HeroSection({ page }: Props): JSX.Element {
           determineBackgroundImage()
         )}
       >
-        <div className="space-y-5 text-center text-primary md:w-1/2 md:text-left lg:w-3/5 xl:w-1/2">
+        <div className="space-y-3 text-center text-primary md:w-1/2 md:text-left lg:w-3/5 xl:w-1/2">
           <div className="font-fraunces text-[40px] leading-10 md:text-5xl lg:text-[72px]">
             {determinePrimaryText()}
           </div>
