@@ -9,28 +9,28 @@ function ProductSection() {
   }[] = [
     {
       id: 1,
-      image: "/../public/assets/home/desktop/image-gran-espresso.png",
+      image: "/assets/home/desktop/image-gran-espresso.png",
       name: "Gran Espresso",
       description:
         "Light and flavorful blend with cocoa and black pepper for an intense experience",
     },
     {
       id: 2,
-      image: "/../public/assets/home/desktop/image-planalto.png",
+      image: "/assets/home/desktop/image-planalto.png",
       name: "Planalto",
       description:
         "Brazilian dark roast with rich and velvety body, and hints of fruits and nuts",
     },
     {
       id: 3,
-      image: "/../public/assets/home/desktop/image-piccollo.png",
+      image: "/assets/home/desktop/image-piccollo.png",
       name: "Piccollo",
       description:
         "Brazilian dark roast with rich and velvety body, and hints of fruits and nuts",
     },
     {
       id: 4,
-      image: "/../public/assets/home/desktop/image-danche.png",
+      image: "/assets/home/desktop/image-danche.png",
       name: "Danche",
       description:
         "Ethiopian hand-harvested blend densely packed with vibrant fruit notes",
