@@ -4,6 +4,7 @@ import logo from "../../public/assets/shared/desktop/logo.svg";
 import hamburgerBtn from "../../public/assets/shared/mobile/icon-hamburger.svg";
 import closeBtn from "../../public/assets/shared/mobile/icon-close.svg";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 type Props = {};
 
@@ -44,28 +45,36 @@ function Header({}: Props): JSX.Element {
           </Link>
         </div>
       </nav>
-      {navToggle && (
-        <nav className="absolute left-0 top-12 z-10 h-screen w-screen">
-          <div className="space-y-4 bg-white text-center font-fraunces text-2xl text-[#333D4B] ">
-            <div>
-              <Link href="/">
-                <a>Home</a>
-              </Link>
+      <AnimatePresence>
+        {navToggle && (
+          <motion.nav
+            className="absolute left-0 top-12 z-10 h-screen w-screen"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ ease: "easeInOut", duration: 0.25 }}
+          >
+            <div className="space-y-4 bg-white text-center font-fraunces text-2xl text-[#333D4B] ">
+              <div>
+                <Link href="/">
+                  <a>Home</a>
+                </Link>
+              </div>
+              <div>
+                <Link href="/about">
+                  <a>About Us</a>
+                </Link>
+              </div>
+              <div>
+                <Link href="/plan">
+                  <a>Create your Plan</a>
+                </Link>
+              </div>
             </div>
-            <div>
-              <Link href="/about">
-                <a>About Us</a>
-              </Link>
-            </div>
-            <div>
-              <Link href="/plan">
-                <a>Create your Plan</a>
-              </Link>
-            </div>
-          </div>
-          <div className="h-full bg-gradient-to-b from-white to-white/50" />
-        </nav>
-      )}
+            <div className="h-full bg-gradient-to-b from-white to-white/50" />
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
