@@ -28,7 +28,7 @@ function CompanyTraits(): JSX.Element {
   ];
   return (
     <section className="h-[900px] rounded-sm bg-[#2C343E] md:h-[578px] md:pt-5 xl:pt-12">
-      <Grid classes="text-[#FEFCF7] text-center pt-6 pb-10 md:pb-0">
+      <Grid classes="text-[#FEFCF7] text-center pt-6 pb-7 md:pb-0">
         <h2 className="col-span-full col-start-1 font-fraunces text-3xl font-bold xl:text-[40px]">
           Why choose us?
         </h2>
