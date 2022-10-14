@@ -9,6 +9,28 @@ import { motion, AnimatePresence } from "framer-motion";
 type Props = {};
 
 function Header({}: Props): JSX.Element {
+  const links: {
+    id: number;
+    name: string;
+    link: string;
+  }[] = [
+    {
+      id: 1,
+      name: "Home",
+      link: "/",
+    },
+    {
+      id: 2,
+      name: "About Us",
+      link: "/about",
+    },
+    {
+      id: 3,
+      name: "Create Your Plan",
+      link: "/plan",
+    },
+  ];
+
   const [navToggle, setNavToggle] = useState(false);
 
   function navToggleHandler() {
@@ -29,21 +51,13 @@ function Header({}: Props): JSX.Element {
         )}
       </div>
       <nav className="hidden gap-4 font-barlow text-xs font-bold tracking-widest text-secondary md:flex ">
-        <div>
-          <Link href="/">
-            <a>HOME</a>
-          </Link>
-        </div>
-        <div>
-          <Link href="/about">
-            <a>ABOUT US</a>
-          </Link>
-        </div>
-        <div>
-          <Link href="/plan">
-            <a>CREATE YOUR PLAN</a>
-          </Link>
-        </div>
+        {links.map(({ id, link, name }) => (
+          <div key={id}>
+            <Link href={link}>
+              <a>{name.toUpperCase()}</a>
+            </Link>
+          </div>
+        ))}
       </nav>
       <AnimatePresence>
         {navToggle && (
@@ -55,21 +69,13 @@ function Header({}: Props): JSX.Element {
             transition={{ ease: "easeInOut", duration: 0.25 }}
           >
             <div className="space-y-4 bg-white text-center font-fraunces text-2xl text-[#333D4B] ">
-              <div>
-                <Link href="/">
-                  <a>Home</a>
-                </Link>
-              </div>
-              <div>
-                <Link href="/about">
-                  <a>About Us</a>
-                </Link>
-              </div>
-              <div>
-                <Link href="/plan">
-                  <a>Create your Plan</a>
-                </Link>
-              </div>
+              {links.map(({ id, link, name }) => (
+                <div key={id}>
+                  <Link href={link}>
+                    <a>{name}</a>
+                  </Link>
+                </div>
+              ))}
             </div>
             <div className="h-full bg-gradient-to-b from-white to-white/50" />
           </motion.nav>

@@ -334,6 +334,30 @@ module.exports = {
         "inner-lg":
           "inset 0 -50px 50px var(--tw-shadow-color), 0 30px 30px var(--tw-shadow-color), 0 15px 15px var(--tw-shadow-color), 0 10px 8px var(--tw-shadow-color), 0 4px 4px var(--tw-shadow-color), 0 2px 2px var(--tw-shadow-color)",
       },
+      gridColumn: {
+        "span-13": "span 13 / span 13",
+        "span-14": "span 14 / span 14",
+        "span-15": "span 15 / span 15",
+        "span-16": "span 16 / span 16",
+      },
+      gridTemplateColumns: {
+        // Simple 16 column grid
+        16: "repeat(16, minmax(0, 1fr))",
+      },
+      gridColumnStart: {
+        13: "13",
+        14: "14",
+        15: "15",
+        16: "16",
+        17: "17",
+      },
+      gridColumnEnd: {
+        13: "13",
+        14: "14",
+        15: "15",
+        16: "16",
+        17: "17",
+      },
       container: {
         center: true,
         padding: {
