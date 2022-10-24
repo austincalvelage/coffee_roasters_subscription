@@ -2,24 +2,6 @@ import Image from "next/image";
 import Grid from "./Grid";
 
 function CompanyTraits(): JSX.Element {
-  const traits: {
-    image: string;
-    trait: string;
-    description: string;
-  }[] = [
-    {
-      image: "/assets/home/desktop/icon-gift.svg",
-      trait: "Exclusive benefits",
-      description:
-        "Special offers and swag when you subscribe, including 30% off your first shipment.",
-    },
-    {
-      image: "/assets/home/desktop/icon-truck.svg",
-      trait: "Free shipping",
-      description:
-        "We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.",
-    },
-  ];
   return (
     <section className="relative">
       <Grid
@@ -55,7 +37,7 @@ function CompanyTraits(): JSX.Element {
         <div className="col-span-full col-start-1 flex flex-col items-center rounded-sm bg-[#0E8784] px-3 pt-9 md:col-span-10 md:col-start-2 md:flex-row md:justify-center md:gap-10 md:px-3 md:py-5 xl:col-span-4 xl:flex-col">
           <div className="w-9 pb-7 md:pb-0">
             <Image
-              src="/assets/home/desktop/icon-coffee-bean.svg"
+              src="/assets/home/desktop/icon-gift.svg"
               alt="coffee bean"
               layout="responsive"
               width={454}
@@ -63,17 +45,19 @@ function CompanyTraits(): JSX.Element {
             />
           </div>
           <div className="space-y-3 pb-7 text-center text-[#FEFCF7] md:w-3/5 md:pb-0 md:text-left xl:text-center">
-            <h3 className="font-fraunces text-2xl font-bold">Best quality</h3>
+            <h3 className="font-fraunces text-2xl font-bold">
+              Exclusive benefits
+            </h3>
             <p className="font-barlow leading-7">
-              Discover an endless variety of the world’s best artisan coffee
-              from each of our roasters.
+              Special offers and swag when you subscribe, including 30% off your
+              first shipment.
             </p>
           </div>
         </div>
         <div className="col-span-full col-start-1 flex flex-col items-center rounded-sm bg-[#0E8784] px-3 pt-9 md:col-span-10 md:col-start-2 md:flex-row md:justify-center md:gap-10 md:px-3 md:py-5 xl:col-span-4 xl:flex-col">
           <div className="w-9 pb-7 md:pb-0">
             <Image
-              src="/assets/home/desktop/icon-coffee-bean.svg"
+              src="/assets/home/desktop/icon-truck.svg"
               alt="coffee bean"
               layout="responsive"
               width={454}
@@ -81,10 +65,10 @@ function CompanyTraits(): JSX.Element {
             />
           </div>
           <div className="space-y-3 pb-7 text-center text-[#FEFCF7] md:w-3/5 md:pb-0 md:text-left xl:text-center">
-            <h3 className="font-fraunces text-2xl font-bold">Best quality</h3>
+            <h3 className="font-fraunces text-2xl font-bold">Free shipping</h3>
             <p className="font-barlow leading-7">
-              Discover an endless variety of the world’s best artisan coffee
-              from each of our roasters.
+              We cover the cost and coffee is delivered fast. Peak freshness:
+              guaranteed.
             </p>
           </div>
         </div>
