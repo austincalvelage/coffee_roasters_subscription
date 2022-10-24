@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import CompanyTraits from "./components/CompanyTraits";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
+import HowItWorks from "./components/HowItWorks";
 import ProductSection from "./components/ProductSection";
 
 const Home: NextPage = () => {
@@ -12,7 +13,7 @@ const Home: NextPage = () => {
         <HeroSection page="home" />
         <ProductSection />
         <CompanyTraits />
-        <section className="h-[800px]"></section>
+        <HowItWorks />
       </main>
     </div>
   );
