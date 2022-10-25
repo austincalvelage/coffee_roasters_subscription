@@ -2,95 +2,78 @@ import Image from "next/image";
 import Grid from "./Grid";
 
 function CompanyTraits(): JSX.Element {
-  const traits: {
-    image: string;
-    trait: string;
-    description: string;
-  }[] = [
-    {
-      image: "/assets/home/desktop/icon-coffee-bean.svg",
-      trait: "Best quality",
-      description:
-        "Discover an endless variety of the world’s best artisan coffee from each of our roasters.",
-    },
-    {
-      image: "/assets/home/desktop/icon-gift.svg",
-      trait: "Exclusive benefits",
-      description:
-        "Special offers and swag when you subscribe, including 30% off your first shipment.",
-    },
-    {
-      image: "/assets/home/desktop/icon-truck.svg",
-      trait: "Free shipping",
-      description:
-        "We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.",
-    },
-  ];
   return (
-    <section className="h-[900px] rounded-sm bg-[#2C343E] md:h-[578px] md:pt-5 xl:pt-12">
-      <Grid classes="text-[#FEFCF7] text-center pt-6 pb-7 md:pb-0">
-        <h2 className="col-span-full col-start-1 font-fraunces text-3xl font-bold xl:text-[40px]">
+    <section className="relative">
+      <Grid
+        classes="text-[#FEFCF7] text-center pt-6 rounded-sm z-30 px-3 md:pt-7 xl:px-10"
+        gap="gap-3.5"
+      >
+        <h2 className="col-span-full col-start-1 pb-3 font-fraunces text-3xl font-bold md:text-[32px] xl:text-[40px]">
           Why choose us?
         </h2>
-        <p className=" col-span-6 col-start-2 font-barlow text-[15px] md:col-span-12 md:col-start-3 xl:col-span-8 xl:col-start-5">
+        <p className="col-span-full col-start-1 pb-8 font-barlow text-[15px] leading-loose md:col-span-8 md:col-start-3 md:pb-6">
           A large part of our role is choosing which particular coffees will be
           featured in our range. This means working closely with the best coffee
           growers to give you a more impactful experience on every level.
         </p>
+        <div className="col-span-full col-start-1 flex flex-col items-center rounded-sm bg-[#0E8784] px-3 pt-9 md:col-span-10 md:col-start-2 md:flex-row md:justify-center md:gap-10 md:px-3 md:py-5 xl:col-span-4 xl:flex-col">
+          <div className="w-9 pb-7 md:pb-0">
+            <Image
+              src="/assets/home/desktop/icon-coffee-bean.svg"
+              alt="coffee bean"
+              layout="responsive"
+              width={454}
+              height={356}
+            />
+          </div>
+          <div className="space-y-3 pb-7 text-center text-[#FEFCF7] md:w-3/5 md:pb-0 md:text-left xl:text-center">
+            <h3 className="font-fraunces text-2xl font-bold">Best quality</h3>
+            <p className="font-barlow leading-7">
+              Discover an endless variety of the world’s best artisan coffee
+              from each of our roasters.
+            </p>
+          </div>
+        </div>
+        <div className="col-span-full col-start-1 flex flex-col items-center rounded-sm bg-[#0E8784] px-3 pt-9 md:col-span-10 md:col-start-2 md:flex-row md:justify-center md:gap-10 md:px-3 md:py-5 xl:col-span-4 xl:flex-col">
+          <div className="w-9 pb-7 md:pb-0">
+            <Image
+              src="/assets/home/desktop/icon-gift.svg"
+              alt="coffee bean"
+              layout="responsive"
+              width={454}
+              height={356}
+            />
+          </div>
+          <div className="space-y-3 pb-7 text-center text-[#FEFCF7] md:w-3/5 md:pb-0 md:text-left xl:text-center">
+            <h3 className="font-fraunces text-2xl font-bold">
+              Exclusive benefits
+            </h3>
+            <p className="font-barlow leading-7">
+              Special offers and swag when you subscribe, including 30% off your
+              first shipment.
+            </p>
+          </div>
+        </div>
+        <div className="col-span-full col-start-1 flex flex-col items-center rounded-sm bg-[#0E8784] px-3 pt-9 md:col-span-10 md:col-start-2 md:flex-row md:justify-center md:gap-10 md:px-3 md:py-5 xl:col-span-4 xl:flex-col">
+          <div className="w-9 pb-7 md:pb-0">
+            <Image
+              src="/assets/home/desktop/icon-truck.svg"
+              alt="coffee bean"
+              layout="responsive"
+              width={454}
+              height={356}
+            />
+          </div>
+          <div className="space-y-3 pb-7 text-center text-[#FEFCF7] md:w-3/5 md:pb-0 md:text-left xl:text-center">
+            <h3 className="font-fraunces text-2xl font-bold">Free shipping</h3>
+            <p className="font-barlow leading-7">
+              We cover the cost and coffee is delivered fast. Peak freshness:
+              guaranteed.
+            </p>
+          </div>
+        </div>
       </Grid>
-      <Grid classes="relative md:top-8 xl:top-12 space-y-2 xl:space-y-0">
-        <Grid classes="py-5 rounded-sm bg-[#0E8784] col-span-6 col-start-2 md:col-span-14 md:col-start-2 md:flex-row md:py-4 xl:col-span-4 xl:col-start-3">
-          <div className="col-span-full col-start-1 w-9 place-self-center md:col-span-2 md:col-start-3 xl:col-span-full xl:col-start-1 xl:place-self-center">
-            <Image
-              src={traits[0].image}
-              alt="coffee beans"
-              layout="responsive"
-              width={454}
-              height={356}
-            />
-          </div>
-          <div className="col-span-6 col-start-2 space-y-3 place-self-center text-center text-[#FEFCF7] md:col-span-9 md:col-start-6 md:text-left xl:col-span-14 xl:col-start-2 xl:place-self-center xl:text-center">
-            <h3 className="font-fraunces text-2xl font-bold">
-              {traits[0].trait}
-            </h3>
-            <p className="font-barlow leading-7">{traits[0].description}</p>
-          </div>
-        </Grid>
-        <Grid classes="py-5 rounded-sm bg-[#0E8784] col-span-6 col-start-2 md:col-span-14 md:col-start-2 md:flex-row md:py-4 xl:col-span-4 xl:col-start-7">
-          <div className="col-span-full col-start-1 w-9 place-self-center md:col-span-2 md:col-start-3 xl:col-span-full xl:col-start-1 xl:place-self-center">
-            <Image
-              src={traits[1].image}
-              alt="coffee beans"
-              layout="responsive"
-              width={454}
-              height={356}
-            />
-          </div>
-          <div className="col-span-6 col-start-2 space-y-3 place-self-center text-center text-[#FEFCF7] md:col-span-9 md:col-start-6 md:text-left xl:col-span-14 xl:col-start-2 xl:place-self-center xl:text-center">
-            <h3 className="font-fraunces text-2xl font-bold">
-              {traits[1].trait}
-            </h3>
-            <p className="font-barlow leading-7">{traits[1].description}</p>
-          </div>
-        </Grid>
-        <Grid classes="py-5 rounded-sm bg-[#0E8784] col-span-6 col-start-2 md:col-span-14 md:col-start-2 md:flex-row md:py-4 xl:col-span-4 xl:col-start-11">
-          <div className="col-span-full col-start-1 w-9 place-self-center md:col-span-2 md:col-start-3 xl:col-span-full xl:col-start-1 xl:place-self-center">
-            <Image
-              src={traits[2].image}
-              alt="coffee beans"
-              layout="responsive"
-              width={454}
-              height={356}
-            />
-          </div>
-          <div className="col-span-6 col-start-2 space-y-3 place-self-center text-center text-[#FEFCF7] md:col-span-9 md:col-start-6 md:text-left xl:col-span-14 xl:col-start-2 xl:place-self-center xl:text-center">
-            <h3 className="font-fraunces text-2xl font-bold">
-              {traits[2].trait}
-            </h3>
-            <p className="font-barlow leading-7">{traits[2].description}</p>
-          </div>
-        </Grid>
-      </Grid>
+      <div className="absolute inset-0 -z-10 h-[900px] rounded-sm bg-[#2C343E] md:h-[600px]" />
     </section>
   );
 }
