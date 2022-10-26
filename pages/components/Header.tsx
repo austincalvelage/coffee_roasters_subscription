@@ -10,22 +10,18 @@ type Props = {};
 
 function Header({}: Props): JSX.Element {
   const links: {
-    id: number;
     name: string;
     link: string;
   }[] = [
     {
-      id: 1,
       name: "Home",
       link: "/",
     },
     {
-      id: 2,
       name: "About Us",
       link: "/about",
     },
     {
-      id: 3,
       name: "Create Your Plan",
       link: "/plan",
     },
@@ -51,8 +47,8 @@ function Header({}: Props): JSX.Element {
         )}
       </div>
       <nav className="hidden gap-4 font-barlow text-xs font-bold tracking-widest text-secondary md:flex ">
-        {links.map(({ id, link, name }) => (
-          <div key={id}>
+        {links.map(({ link, name }, index) => (
+          <div key={index}>
             <Link href={link}>
               <a>{name.toUpperCase()}</a>
             </Link>
@@ -69,8 +65,8 @@ function Header({}: Props): JSX.Element {
             transition={{ ease: "easeInOut", duration: 0.25 }}
           >
             <div className="space-y-4 bg-white text-center font-fraunces text-2xl text-[#333D4B] ">
-              {links.map(({ id, link, name }) => (
-                <div key={id}>
+              {links.map(({ link, name }, index) => (
+                <div key={index}>
                   <Link href={link}>
                     <a>{name}</a>
                   </Link>
