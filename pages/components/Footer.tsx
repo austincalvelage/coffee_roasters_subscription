@@ -3,13 +3,7 @@ import Link from "next/link";
 import logo from "../../public/assets/shared/desktop/logoLight.svg";
 import Grid from "./Grid";
 
-import facebookLogo from "../../public/assets/shared/desktop/icon-facebook.svg";
-import twitterLogo from "../../public/assets/shared/desktop/icon-twitter.svg";
-import instagramLogo from "../../public/assets/shared/desktop/icon-instagram.svg";
-
-type Props = {};
-
-function Footer({}: Props): JSX.Element {
+function Footer(): JSX.Element {
   const links: {
     name: string;
     link: string;
@@ -27,7 +21,28 @@ function Footer({}: Props): JSX.Element {
       link: "/plan",
     },
   ];
-  const socialLinks = [facebookLogo, twitterLogo, instagramLogo];
+
+  const socialLinks: {
+    name: string;
+    link: string;
+    image: string;
+  }[] = [
+    {
+      name: "Facebook",
+      image: "/assets/shared/desktop/icon-facebook.svg",
+      link: "#",
+    },
+    {
+      name: "Twitter",
+      image: "/assets/shared/desktop/icon-twitter.svg",
+      link: "#",
+    },
+    {
+      name: "Instagram",
+      image: "/assets/shared/desktop/icon-instagram.svg",
+      link: "#",
+    },
+  ];
 
   return (
     <footer className="bg-[#2C343E] py-6">
@@ -45,13 +60,18 @@ function Footer({}: Props): JSX.Element {
           ))}
         </nav>
         <div className="col-span-full col-start-1 flex items-center justify-center gap-3 xl:col-span-1 xl:col-start-11">
-          {socialLinks.map((socialLink, index) => (
-            <div key={index}>
-              <Link href="#">
-                <a
-                  className="bg-contain bg-no-repeat px-2 py-1 xl:px-1 xl:py-0"
-                  style={{ backgroundImage: `url(${socialLink.src})` }}
-                />
+          {socialLinks.map(({ name, image, link }, index) => (
+            <div key={index} className="h-3 w-3">
+              <Link href={link}>
+                <a>
+                  <Image
+                    src={image}
+                    alt={name}
+                    layout="responsive"
+                    width={40}
+                    height={40}
+                  />
+                </a>
               </Link>
             </div>
           ))}
