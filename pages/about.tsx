@@ -7,7 +7,6 @@ const About: NextPage = () => {
     <div className="space-y-4 px-3 pt-4 md:px-5 lg:px-10">
       <Header />
       <HeroSection page="about" />
-      
     </div>
   );
 };
