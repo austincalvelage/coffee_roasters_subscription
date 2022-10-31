@@ -53,8 +53,8 @@ function Footer(): JSX.Element {
         <nav className="col-span-full col-start-1 flex flex-col items-center space-y-3 font-barlow text-xs font-bold tracking-widest text-secondary md:flex-row md:justify-center md:space-y-0 xl:col-span-4 xl:col-start-5 xl:justify-start">
           {links.map(({ link, name }, index) => (
             <div key={index}>
-              <Link href={link}>
-                <a className="px-2 py-1">{name.toUpperCase()}</a>
+              <Link href={link} className="px-2 py-1">
+                {name.toUpperCase()}
               </Link>
             </div>
           ))}
@@ -63,15 +63,15 @@ function Footer(): JSX.Element {
           {socialLinks.map(({ name, image, link }, index) => (
             <div key={index} className="h-3 w-3">
               <Link href={link}>
-                <a>
-                  <Image
-                    src={image}
-                    alt={name}
-                    layout="responsive"
-                    width={40}
-                    height={40}
-                  />
-                </a>
+
+                <Image
+                  src={image}
+                  alt={name}
+                  layout="responsive"
+                  width={40}
+                  height={40}
+                />
+
               </Link>
             </div>
           ))}

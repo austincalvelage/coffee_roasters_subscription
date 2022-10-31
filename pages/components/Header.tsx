@@ -50,7 +50,7 @@ function Header({}: Props): JSX.Element {
         {links.map(({ link, name }, index) => (
           <div key={index}>
             <Link href={link}>
-              <a>{name.toUpperCase()}</a>
+              {name.toUpperCase()}
             </Link>
           </div>
         ))}
@@ -68,7 +68,7 @@ function Header({}: Props): JSX.Element {
               {links.map(({ link, name }, index) => (
                 <div key={index}>
                   <Link href={link}>
-                    <a>{name}</a>
+                    {name}
                   </Link>
                 </div>
               ))}
