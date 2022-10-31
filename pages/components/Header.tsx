@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import logo from "../../public/assets/shared/desktop/logo.svg";
 import hamburgerBtn from "../../public/assets/shared/mobile/icon-hamburger.svg";

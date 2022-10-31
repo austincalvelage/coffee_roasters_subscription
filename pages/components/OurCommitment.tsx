@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Grid from "./Grid";
 
 function CompanyTraits(): JSX.Element {
