@@ -34,7 +34,7 @@ function Header({}: Props): JSX.Element {
   }
 
   return (
-    <header className='mb-5 flex justify-between md:mb-6 lg:mb-4'>
+    <header className='mb-5 flex justify-between pt-4 md:mb-6 lg:mb-4'>
       <div className='h-full w-20 md:w-30 lg:w-25'>
         <Image src={logo} alt='logo' layout='responsive' />
       </div>
