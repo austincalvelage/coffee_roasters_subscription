@@ -1,4 +1,5 @@
 import cn from 'classnames'
+import Button from './Button'
 
 type Props = {
   page: string
@@ -69,9 +70,7 @@ function HeroSection({ page }: Props): JSX.Element {
             {determinePrimaryText()}
           </div>
           <p className='px-3 font-barlow leading-7 md:px-0'>{determineSecondaryText()}</p>
-          {page === 'home' && (
-            <button className='rounded bg-[#0E8784] py-2 px-4 font-fraunces text-lg'>Create your plan</button>
-          )}
+          {page === 'home' && <Button>Create your plan</Button>}
         </div>
       </div>
     </section>
