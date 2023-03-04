@@ -4,7 +4,7 @@ import HeroSection from '../components/HeroSection'
 
 const Plan: NextPage = () => {
   return (
-    <div className='space-y-4 pt-4'>
+    <div className='space-y-4'>
       <Header />
       <HeroSection page='plan' />
     </div>

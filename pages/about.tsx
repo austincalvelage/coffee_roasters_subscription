@@ -6,7 +6,7 @@ import Quality from '../components/Quality'
 
 const About: NextPage = () => {
   return (
-    <div className='space-y-4 pt-4'>
+    <div className='space-y-4'>
       <Header />
       <main className='space-y-15'>
         <HeroSection page='about' />
