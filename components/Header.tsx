@@ -42,9 +42,9 @@ function Header({}: Props): JSX.Element {
         {!navToggle && <Image src={hamburgerBtn} width='20' height='20' alt='logo' />}
         {navToggle && <Image src={closeBtn} width='20' height='20' alt='logo' />}
       </div>
-      <nav className='hidden gap-4 font-barlow text-xs font-bold tracking-widest text-secondary md:flex '>
+      <nav className='hidden gap-4 font-barlow text-xs font-bold tracking-widest text-secondary md:flex'>
         {links.map(({ link, name }, index) => (
-          <div key={index}>
+          <div key={index} className='text-[#83888F] hover:text-[#333D4B]'>
             <Link href={link}>{name.toUpperCase()}</Link>
           </div>
         ))}
@@ -58,7 +58,7 @@ function Header({}: Props): JSX.Element {
             exit={{ opacity: 0 }}
             transition={{ ease: 'easeInOut', duration: 0.25 }}
           >
-            <div className='space-y-4 bg-white text-center font-fraunces text-2xl text-[#333D4B] '>
+            <div className='space-y-4 bg-white text-center font-fraunces text-2xl text-[#333D4B]'>
               {links.map(({ link, name }, index) => (
                 <div key={index}>
                   <Link href={link}>{name}</Link>
