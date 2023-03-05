@@ -6,9 +6,7 @@ import closeBtn from '../public/assets/shared/mobile/icon-close.svg'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-type Props = {}
-
-function Header({}: Props): JSX.Element {
+export default function Header(): JSX.Element {
   const links: {
     name: string
     link: string
@@ -34,7 +32,7 @@ function Header({}: Props): JSX.Element {
   }
 
   return (
-    <header className='mb-5 flex justify-between pt-4 md:mb-6 lg:mb-4'>
+    <header className='mb-5 flex justify-between bg-light-cream pt-4 md:mb-6 lg:mb-4'>
       <div className='h-full w-20 md:w-30 lg:w-25'>
         <Image src={logo} alt='logo' layout='responsive' />
       </div>
@@ -42,9 +40,9 @@ function Header({}: Props): JSX.Element {
         {!navToggle && <Image src={hamburgerBtn} width='20' height='20' alt='logo' />}
         {navToggle && <Image src={closeBtn} width='20' height='20' alt='logo' />}
       </div>
-      <nav className='hidden gap-4 font-barlow text-xs font-bold tracking-widest text-secondary md:flex'>
+      <nav className='hidden gap-4 font-barlow text-sm font-black md:flex'>
         {links.map(({ link, name }, index) => (
-          <div key={index} className='text-[#83888F] hover:text-[#333D4B]'>
+          <div key={index} className='flex items-center text-grey-heather hover:text-dark-grey-blue'>
             <Link href={link}>{name.toUpperCase()}</Link>
           </div>
         ))}
@@ -58,19 +56,17 @@ function Header({}: Props): JSX.Element {
             exit={{ opacity: 0 }}
             transition={{ ease: 'easeInOut', duration: 0.25 }}
           >
-            <div className='space-y-4 bg-white text-center font-fraunces text-2xl text-[#333D4B]'>
+            <div className='space-y-4 bg-light-cream pt-5 text-center font-fraunces text-lg text-dark-grey-blue'>
               {links.map(({ link, name }, index) => (
                 <div key={index}>
                   <Link href={link}>{name}</Link>
                 </div>
               ))}
             </div>
-            <div className='h-full bg-gradient-to-b from-white to-white/50' />
+            <div className='h-full bg-gradient-to-b from-light-cream to-light-cream/50' />
           </motion.nav>
         )}
       </AnimatePresence>
     </header>
   )
 }
-
-export default Header

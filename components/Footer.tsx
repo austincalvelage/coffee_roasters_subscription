@@ -2,8 +2,9 @@ import Image from 'next/legacy/image'
 import Link from 'next/link'
 import logo from '../public/assets/shared/desktop/logoLight.svg'
 import Grid from './Grid'
+import { FacebookIcon, TwitterIcon, InstagramIcon } from './Icons'
 
-function Footer(): JSX.Element {
+export default function Footer(): JSX.Element {
   const links: {
     name: string
     link: string
@@ -23,36 +24,32 @@ function Footer(): JSX.Element {
   ]
 
   const socialLinks: {
-    name: string
     link: string
-    image: string
+    icon: JSX.Element
   }[] = [
     {
-      name: 'Facebook',
-      image: '/assets/shared/desktop/icon-facebook.svg',
+      icon: <FacebookIcon />,
       link: '#',
     },
     {
-      name: 'Twitter',
-      image: '/assets/shared/desktop/icon-twitter.svg',
+      icon: <TwitterIcon />,
       link: '#',
     },
     {
-      name: 'Instagram',
-      image: '/assets/shared/desktop/icon-instagram.svg',
+      icon: <InstagramIcon />,
       link: '#',
     },
   ]
 
   return (
-    <footer className='bg-[#2C343E] py-6'>
+    <footer className='bg-dark-grey-blue py-4'>
       <Grid classes='space-y-4 xl:space-y-0'>
         <div className='col-span-4 col-start-2 md:col-start-5 xl:col-span-2 xl:col-start-2'>
           <Image src={logo} alt='logo' layout='responsive' />
         </div>
-        <nav className='col-span-full col-start-1 flex flex-col items-center space-y-3 font-barlow text-xs font-bold tracking-widest text-secondary md:flex-row md:justify-center md:space-y-0 xl:col-span-4 xl:col-start-5 xl:justify-start'>
+        <nav className='text-secondary col-span-full col-start-1 flex flex-col items-center space-y-3 font-barlow text-sm font-black md:flex-row md:justify-center md:space-y-0 xl:col-span-4 xl:col-start-5 xl:justify-start'>
           {links.map(({ link, name }, index) => (
-            <div key={index}>
+            <div key={index} className='text-grey-heather hover:text-light-cream'>
               <Link href={link} className='px-2 py-1'>
                 {name.toUpperCase()}
               </Link>
@@ -60,11 +57,9 @@ function Footer(): JSX.Element {
           ))}
         </nav>
         <div className='col-span-full col-start-1 flex items-center justify-center gap-3 xl:col-span-1 xl:col-start-11'>
-          {socialLinks.map(({ name, image, link }, index) => (
-            <div key={index} className='h-3 w-3'>
-              <Link href={link}>
-                <Image src={image} alt={name} layout='responsive' width={40} height={40} />
-              </Link>
+          {socialLinks.map(({ icon, link }, index) => (
+            <div key={index}>
+              <Link href={link}>{icon}</Link>
             </div>
           ))}
         </div>
@@ -72,5 +67,3 @@ function Footer(): JSX.Element {
     </footer>
   )
 }
-
-export default Footer

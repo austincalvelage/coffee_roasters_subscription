@@ -5,7 +5,7 @@ type Props = {
   page: string
 }
 
-function HeroSection({ page }: Props): JSX.Element {
+export default function HeroSection({ page }: Props): JSX.Element {
   function determineBackgroundImage() {
     if (page === 'home') {
       return 'h-[500px] bg-image-hero-home-mb md:bg-image-hero-home-tb lg:bg-image-hero-home-dk lg:h-[600px]'
@@ -58,23 +58,21 @@ function HeroSection({ page }: Props): JSX.Element {
   }
 
   return (
-    <section className='dark flex justify-center'>
+    <section className='flex justify-center'>
       <div
         className={cn(
-          'lg:px-10) flex w-full flex-col justify-center rounded-sm bg-cover bg-no-repeat md:items-start md:px-5',
+          'flex w-full flex-col justify-center rounded-lg bg-cover bg-no-repeat md:items-start md:px-5 lg:px-10',
           determineBackgroundImage()
         )}
       >
-        <div className='space-y-3 text-center text-primary md:w-1/2 md:text-left lg:w-3/5 xl:w-1/2 xl:max-w-[700px]'>
-          <div className='font-fraunces text-[40px] leading-10 md:text-5xl lg:text-[72px]'>
-            {determinePrimaryText()}
+        <div className='space-y-7 text-center md:w-1/2 md:text-left lg:w-3/5 xl:w-1/2 xl:max-w-[700px]'>
+          <div className='text- space-y-4 text-light-cream'>
+            <div className='md:text-5xl font-fraunces text-2xl leading-10 lg:text-3xl'>{determinePrimaryText()}</div>
+            <p className='px-3 font-barlow md:px-0 lg:w-4/5'>{determineSecondaryText()}</p>
           </div>
-          <p className='px-3 font-barlow leading-7 md:px-0'>{determineSecondaryText()}</p>
           {page === 'home' && <Button>Create your plan</Button>}
         </div>
       </div>
     </section>
   )
 }
-
-export default HeroSection

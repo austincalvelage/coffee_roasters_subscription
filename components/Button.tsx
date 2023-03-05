@@ -11,8 +11,8 @@ export default function Button({ children, isInactive, className }: Props) {
   return (
     <button
       className={cn(
-        'rounded py-2 px-4 font-fraunces text-lg text-[#FEFCF7]',
-        isInactive ? 'bg-[#E2DEDB]' : 'bg-[#0E8784] hover:bg-[#66D2CF]',
+        'h-7 w-[217px] rounded-md font-fraunces text-light-cream',
+        isInactive ? 'bg-fall-chill' : 'bg-dark-cyan hover:bg-petrichor',
         className
       )}
     >
