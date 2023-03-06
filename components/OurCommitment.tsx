@@ -1,21 +1,26 @@
 import Image from 'next/image'
 import Grid from './Grid'
-import comitmentMobile from '../public/assets/about/mobile/image-commitment.jpg'
-import comitmentTablet from '../public/assets/about/tablet/image-commitment.jpg'
-import comitmentDesktop from '../public/assets/about/desktop/image-commitment.jpg'
+import commitmentMobile from '../public/assets/about/mobile/image-commitment.jpg'
+import commitmentTablet from '../public/assets/about/tablet/image-commitment.jpg'
+import commitmentDesktop from '../public/assets/about/desktop/image-commitment.jpg'
 
-function CompanyTraits(): JSX.Element {
+export default function CompanyTraits(): JSX.Element {
   return (
     <section>
-      <Grid>
+      <Grid classes='space-y-6'>
         <div className='relative col-span-full col-start-1 md:col-span-5'>
-          <Image src={comitmentMobile} alt='coffee bean' className='rounded-sm md:hidden' />
-          <Image src={comitmentTablet} alt='coffee bean' className='hidden rounded-sm md:inline-block lg:hidden' />
-          <Image src={comitmentDesktop} alt='coffee bean' className='hidden rounded-sm lg:inline-block' />
+          <Image src={commitmentMobile} alt='coffee bean' className='inline-block rounded-lg md:hidden' sizes='100vw' />
+          <Image src={commitmentTablet} alt='coffee bean' className='hidden rounded-lg md:inline-block xl:hidden' />
+          <Image
+            src={commitmentDesktop}
+            alt='coffee bean'
+            className='hidden rounded-lg xl:inline-block'
+            sizes='100vw'
+          />
         </div>
         <div className='col-span-full col-start-1 space-y-3 self-center text-center md:col-start-7 md:text-left'>
-          <h3 className='font-fraunces text-4xl font-bold'>Our commitment</h3>
-          <p className='font-barlow text-[#333D4B]'>
+          <h3 className='font-fraunces text-xl font-black text-dark-grey-blue xl:text-2xl'>Our commitment</h3>
+          <p className='font-barlow text-dark-grey-blue'>
             We’re built on a simple mission and a commitment to doing good along the way. We want to make it easy for
             you to discover and brew the world’s best coffee at home. It all starts at the source. To locate the
             specific lots we want to purchase, we travel nearly 60 days a year trying to understand the challenges and
@@ -29,5 +34,3 @@ function CompanyTraits(): JSX.Element {
     </section>
   )
 }
-
-export default CompanyTraits
