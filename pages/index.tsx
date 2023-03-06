@@ -8,9 +8,9 @@ import ProductSection from '../components/ProductSection'
 
 const Home: NextPage = () => {
   return (
-    <div className='space-y-4'>
+    <div className='space-y-6'>
       <Header />
-      <main className='space-y-15'>
+      <main className='space-y-20'>
         <HeroSection page='home' />
         <ProductSection />
         <CompanyTraits />

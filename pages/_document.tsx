@@ -20,7 +20,7 @@ export default function Document() {
           rel='stylesheet'
         />
       </Head>
-      <body className='mx-auto max-w-[1280px] bg-light-cream px-3 sm:px-10 md:px-5'>
+      <body className='mx-auto bg-light-cream px-3 md:max-w-[768px] md:px-5 xl:max-w-[1280px]'>
         <Main />
         <NextScript />
       </body>

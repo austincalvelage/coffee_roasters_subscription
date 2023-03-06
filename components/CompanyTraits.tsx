@@ -12,7 +12,7 @@ function CompanyTraits(): JSX.Element {
             working closely with the best coffee growers to give you a more impactful experience on every level.
           </p>
         </div>
-        <div className='md:centerjustify- col-span-full col-start-1 flex flex-col items-center space-y-8 rounded-lg bg-[#0E8784] px-4 pt-9 pb-7 md:col-span-10 md:col-start-2 md:flex-row md:gap-10 md:space-y-0 md:px-5 md:py-5 xl:col-span-4 xl:flex-col'>
+        <div className='col-span-full col-start-1 flex flex-col items-center space-y-8 rounded-lg bg-[#0E8784] px-4 pt-9 pb-7 md:col-span-10 md:col-start-2 md:min-h-[208px] md:flex-row md:gap-10 md:space-y-0 md:px-5 md:py-5 xl:col-span-4 xl:flex-col'>
           <div>
             <CoffeeBeanIcon />
           </div>
@@ -23,7 +23,7 @@ function CompanyTraits(): JSX.Element {
             </p>
           </div>
         </div>
-        <div className='col-span-full col-start-1 flex flex-col items-center space-y-8 rounded-lg bg-[#0E8784] px-4 pt-9 pb-7 md:col-span-10 md:col-start-2 md:flex-row md:justify-center md:gap-10 md:space-y-0 md:px-5 md:py-5 xl:col-span-4 xl:flex-col'>
+        <div className='col-span-full col-start-1 flex flex-col items-center space-y-8 rounded-lg bg-[#0E8784] px-4 pt-9 pb-7 md:col-span-10 md:col-start-2 md:min-h-[208px] md:flex-row md:justify-center md:gap-10 md:space-y-0 md:px-5 md:py-5 xl:col-span-4 xl:flex-col'>
           <div>
             <GiftIcon />
           </div>
@@ -34,7 +34,7 @@ function CompanyTraits(): JSX.Element {
             </p>
           </div>
         </div>
-        <div className='col-span-full col-start-1 flex flex-col items-center space-y-8 rounded-lg bg-[#0E8784] px-4 pt-9 pb-7 md:col-span-10 md:col-start-2 md:flex-row md:justify-center md:gap-10 md:space-y-0 md:px-5 md:py-5 xl:col-span-4 xl:flex-col'>
+        <div className='col-span-full col-start-1 flex flex-col items-center space-y-8 rounded-lg bg-[#0E8784] px-4 pt-9 pb-7 md:col-span-10 md:col-start-2 md:min-h-[208px] md:flex-row md:justify-center md:gap-10 md:space-y-0 md:px-5 md:py-5 xl:col-span-4 xl:flex-col'>
           <div>
             <TruckIcon />
           </div>
