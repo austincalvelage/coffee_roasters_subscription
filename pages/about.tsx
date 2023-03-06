@@ -1,14 +1,24 @@
-import type { NextPage } from "next";
-import Header from "./components/Header";
-import HeroSection from "./components/HeroSection";
+import type { NextPage } from 'next'
+import Header from '../components/Header'
+import HeroSection from '../components/HeroSection'
+import OurCommitment from '../components/OurCommitment'
+import Quality from '../components/Quality'
+import Footer from '../components/Footer'
+import OurHeadquarters from '../components/OurHeadquarters'
 
 const About: NextPage = () => {
   return (
-    <div className="space-y-4 px-3 pt-4 md:px-5 lg:px-10">
+    <div className='space-y-6'>
       <Header />
-      <HeroSection page="about" />
+      <main className='space-y-20'>
+        <HeroSection page='about' />
+        <OurCommitment />
+        <Quality />
+        <OurHeadquarters />
+        <Footer />
+      </main>
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About

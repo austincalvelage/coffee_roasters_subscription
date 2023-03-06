@@ -1,14 +1,19 @@
-import type { NextPage } from "next";
-import Header from "./components/Header";
-import HeroSection from "./components/HeroSection";
+import type { NextPage } from 'next'
+import Header from '../components/Header'
+import HeroSection from '../components/HeroSection'
+import Footer from '../components/Footer'
 
 const Plan: NextPage = () => {
   return (
-    <div className="space-y-4 px-3 pt-4 md:px-5 lg:px-10">
+    <div className='space-y-6'>
       <Header />
-      <HeroSection page="plan" />
-    </div>
-  );
-};
+      <main className='space-y-20'>
+        <HeroSection page='plan' />
 
-export default Plan;
+        <Footer />
+      </main>
+    </div>
+  )
+}
+
+export default Plan
