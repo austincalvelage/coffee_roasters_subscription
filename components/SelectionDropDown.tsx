@@ -15,9 +15,9 @@ export default function SelectionDropDown({ sectionTitle, children }: Props) {
   const [ref, { height }] = useMeasure()
   return (
     <div className=''>
-      <div className='flex items-center justify-between pb-4'>
+      <div className='flex items-center justify-between pb-4' onClick={() => setIsOpen(!isOpen)}>
         <h3 className='w-3/4 font-fraunces text-lg font-black text-grey-heather md:text-xl'>{sectionTitle}</h3>
-        <div onClick={() => setIsOpen(!isOpen)}>
+        <div>
           <ArrowIcon
             className={cn(
               'cursor-pointer fill-dark-cyan transition-transform duration-500 hover:fill-petrichor',

@@ -17,7 +17,7 @@ export default function DropDownOption({ option, description, setSelection, sele
       onClick={handleSelection}
       id={option}
       className={cn(
-        'px h-18 cursor-pointer space-y-1 rounded-lg p-3 hover:bg-pale-orange hover:text-dark-grey-blue md:h-[250px] md:w-1/3',
+        'h-18 cursor-pointer space-y-1 rounded-lg p-3 hover:bg-pale-orange hover:text-dark-grey-blue md:h-[250px] md:w-1/3',
         selection === option ? 'bg-dark-cyan text-light-cream' : 'bg-[#F4F1EB] text-dark-grey-blue'
       )}
     >
