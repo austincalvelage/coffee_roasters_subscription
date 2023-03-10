@@ -5,8 +5,10 @@ import OurCommitment from '../components/OurCommitment'
 import Quality from '../components/Quality'
 import Footer from '../components/Footer'
 import OurHeadquarters from '../components/OurHeadquarters'
+import { useState } from 'react'
 
 const About: NextPage = () => {
+  const [userOrder, setUserOrder] = useState()
   return (
     <div className='space-y-6'>
       <Header />

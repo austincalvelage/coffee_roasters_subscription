@@ -30,7 +30,7 @@ export default function OurHeadquarters() {
       <h3 className='text-center font-fraunces text-[28px] font-black leading-9 text-grey-heather md:text-left md:text-xl xl:text-lg'>
         Our headquarters
       </h3>
-      <div className='md:flex md:gap-10 xl:gap-20'>
+      <div className='space-y-10 md:flex md:gap-10 md:space-y-0 xl:gap-20'>
         {headquarters.map((hq, index) => (
           <div className='flex flex-col items-center text-center md:items-start md:text-left' key={index}>
             {hq.image()}
